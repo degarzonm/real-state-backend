@@ -64,7 +64,6 @@ class TestPropertyService(unittest.TestCase):
                          MockConfig.DEFAULT_YEAR_FILTER)
         print("test_year_fuera_de_rango passed.\n")
 
-
     def test_page_number_negativo(self):
         """Prueba que el número de página negativo se convierte al valor por defecto."""
         print("Running test_page_number_negativo...")

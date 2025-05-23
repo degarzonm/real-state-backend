@@ -73,7 +73,7 @@ class PropertyService:
         )
 
         if properties_data is None:
-            print("Advertencia: data_access.fetch_properties_with_filters devolvió None.")
+            print("Advertencia: data_access.query_filtered_properties devolvió None.")
             return []
 
         return properties_data

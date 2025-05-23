@@ -1,6 +1,7 @@
 import unittest
 import mysql.connector
-from app import data_access  
+from app import data_access
+
 
 class TestDataAccess(unittest.TestCase):
 

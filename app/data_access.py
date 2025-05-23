@@ -6,6 +6,11 @@ from . import config as _default_config_module
 def get_db_connection(connector=mysql.connector.connect, cfg=_default_config_module):
     """
     Establece y devuelve una conexión a la base de datos MySQL.
+    Args:
+        connector: Función de conexión de mysql.connector.
+        cfg: Módulo de configuración con credenciales de la base de datos.
+    Returns:
+        cnx: Conexión a la base de datos.
     """
     try:
         cnx = connector(
@@ -28,7 +33,13 @@ def get_db_connection(connector=mysql.connector.connect, cfg=_default_config_mod
 
 
 def close_db_connection(cnx, cursor=None):
-    """Cierra el cursor y la conexión a la base de datos si están abiertos."""
+    """Cierra el cursor y la conexión a la base de datos si están abiertos.
+    Args:
+        cnx: Conexión a la base de datos.
+        cursor: Cursor de la base de datos.
+    Returns:
+        None
+    """
     if cursor:
         try:
             cursor.close()
