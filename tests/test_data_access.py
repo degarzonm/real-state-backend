@@ -1,11 +1,6 @@
 import unittest
-import mysql.connector  # Para mockear si es necesario, o para el tipo de conexión
-from app import data_access  # Asegúrate de que 'app' sea importable
-# Esto puede requerir añadir el directorio padre a PYTHONPATH
-# o una mejor estructura de paquetes si crece mucho.
-# Por ahora, si ejecutas tests desde la raíz del proyecto,
-# `from app import data_access` debería funcionar.
-
+import mysql.connector
+from app import data_access  
 
 class TestDataAccess(unittest.TestCase):
 
@@ -93,8 +88,8 @@ class TestDataAccess(unittest.TestCase):
     def test_query_filtered_properties_with_multiple_filters(self):
         """Prueba filtrar propiedades con múltiples filtros combinados."""
         print(f"Test query_filtered_properties_with_multiple_filters:")
-        # Asume que existe al menos una propiedad en 'bogota' del año 2011 en 'en_venta'
-        # (según tus datos de ejemplo, la propiedad con id 2 debería cumplir si su estado actual es en_venta)
+        # Asume que existe al menos una propiedad en 'bogota' del año 2019 en 'en_venta'
+        # (según datos de ejemplo, la propiedad con id 2 debería cumplir si su estado actual es en_venta)
         properties = data_access.query_filtered_properties(
             year=2011, city="bogota", status_names=["en_venta"], page_number=1, page_size=1)
         self.assertIsNotNone(properties)
