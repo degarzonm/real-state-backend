@@ -1,0 +1,10 @@
+{
+    "year": 2021,
+    "city": "bogota",
+    "status": [
+      "pre_venta",
+      "en_venta"
+    ],
+    "page": 1,
+    "size": 10
+  }
